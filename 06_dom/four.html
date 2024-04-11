@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body style="background-color: #212121;color: #fff;">
+    <ul class="language">
+        <li>javascript</li>
+    </ul>
+    
+</body>
+<script>
+    function addLanguage(newlang){
+        const li=document.createElement('li');
+        li.innerHTML=`${newlang}`
+        document.querySelector('.language').appendChild(li)
+    }
+
+    addLanguage("python")
+
+    function addoptilanguage(newlang){
+        const li=document.createElement('li')
+        li.appendChild(document.createTextNode(newlang))
+        document.querySelector('.language').appendChild(li)
+    }
+    addoptilanguage("java")
+
+    //edit
+    const secondlang=document.querySelector("li:nth-child(2)")
+    // secondlang.innerHTML="mojo"
+    const newli=document.createElement('li')
+    newli.textContent='mojoo'
+    secondlang.replaceWith(newli)
+
+    const firstelement=document.querySelector("li:first-child")
+    firstelement.outerHTML='<li>gsgsg</li>'
+
+
+    //remove
+    const lastelement=document.querySelector('li:last-child')
+    lastelement.remove()
+
+</script>
+
+
+</html>
