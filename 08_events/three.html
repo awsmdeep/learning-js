@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <h1>Start and Stop</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+
+</body>
+<script>
+    const start=document.querySelector('#start');
+    const stop=document.querySelector('#stop');
+    let intervalstop
+    const set=function(){
+        console.log('started',(new Date).toLocaleTimeString());
+    }
+    start.addEventListener('click',function(){
+         intervalstop=setInterval(set,1000)
+    })
+    stop.addEventListener('click',function(){
+        clearInterval(intervalstop)
+    })
+
+</script>
+</html>
